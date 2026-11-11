@@ -29,18 +29,22 @@ Uma plataforma completa para brasileiros aprenderem árabe padrão (fushā) — 
 
 ## 🔊 Áudio no celular | الصوت على الجوال
 
-O áudio usa a voz de síntese **do próprio aparelho** (Web Speech API). Se tocar no 🔊 e não sair som:
+O app toca **áudios gravados de verdade** (voz neural árabe "Zariyah", ~10.000 clipes MP3 hospedados no próprio site) — funciona **em qualquer aparelho**, mesmo sem voz árabe instalada. A voz de síntese do aparelho (Web Speech API) é usada como reserva para textos fora dos áudios gravados.
 
 | Situação | Solução |
 |---|---|
+| **Sem internet depois da 1ª visita** | Os clipes já ouvidos ficam no cache — continuam tocando offline |
+| **Palavra fora dos áudios gravados** | O app usa a voz do aparelho; para melhorar, instale a voz árabe: |
 | **Android sem voz árabe** | Configurações → Gerenciar apps → **Google Serviços de fala (Speech Services)** → Instalar dados de voz → **Árabe**. Depois reinicie o navegador |
 | **iPhone/iPad** | A voz árabe (Majed) já vem instalada — confira se o **botão de silencioso** lateral está desligado e o volume ligado |
 | **Abriu pelo Instagram/WhatsApp** | Navegadores internos (in-app) frequentemente bloqueiam áudio. Abra o link no **Chrome** (Android) ou **Safari** (iPhone) |
 | **Modo economia de dados** | Alguns aparelhos bloqueiam síntese de voz nele — desative para o navegador |
 
-أفضل تجربة: افتح الرابط في Chrome أو Safari مباشرة (وليس داخل تطبيق آخر)، وتأكد أن الجهاز يحتوي حزمة النطق العربية.
+أفضل تجربة: افتح الرابط في Chrome أو Safari مباشرة (وليس داخل تطبيق آخر). الصوت المسجّل يعمل على أي جهاز فوراً — حزمة النطق العربية على الجهاز مطلوبة فقط للنصوص خارج التسجيلات.
 
-> 💡 O app avisa na tela quando o aparelho não tem voz árabe instalada.
+> 💡 O app avisa na tela quando nem os clipes nem a voz do aparelho estão disponíveis, com o botão **"Ajuda de áudio"** no menu.
+
+> 🛠️ Para regenerar os áudios: `pip install edge-tts && python tools/build_audio.py` (gera `audio/w|e|p|d|v|a|x/*.mp3`, idempotente).
 
 ---
 

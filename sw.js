@@ -1,5 +1,6 @@
 /* Arabesco — Service Worker (offline-ready, updates always delivered) */
-const CACHE = 'arabesco-v2';
+const CACHE = 'arabesco-v3';
+const KEEP_PREFIX = ['arabesco-audio', 'arabesco-online'];
 const ASSETS = [
   './',
   './index.html',
@@ -23,13 +24,18 @@ self.addEventListener('install', e => {
 self.addEventListener('activate', e => {
   e.waitUntil(
     caches.keys().then(keys =>
-      Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))
+      Promise.all(
+        keys.filter(k => k !== CACHE && !KEEP_PREFIX.some(p => k.startsWith(p)))
+            .map(k => caches.delete(k))
+      )
     ).then(() => self.clients.claim())
   );
 });
 
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
+  /* audio clips manage their own cache (arabesco-audio) — don't double-store */
+  if (e.request.url.includes('/audio/')) return;
   /* network-first: visitors always get the latest version when online;
      offline (or a failed request) falls back to the cached copy. */
   e.respondWith((async () => {

@@ -1,8 +1,10 @@
-/* Arabesco — Text-to-Speech (Arabic standard voice) */
+/* Arabesco — Text-to-Speech (3 camadas: clipe gravado → voz do aparelho → aviso) */
 
 let voices = [];
 let ready = false;
 let noVoiceWarned = false;
+let currentAudio = null;    // <audio> element playing a clip
+const CLIP_CACHE = 'arabesco-audio';
 
 function refresh() {
   voices = window.speechSynthesis?.getVoices?.() || [];
@@ -24,14 +26,58 @@ export function arabicVoice() {
   );
 }
 
-/* Explain silence when the device has no Arabic TTS voice installed. */
+/* ── Camada 1: clipe MP3 gravado no projeto (cache p/ offline) ── */
+export async function playClip(url, { onStart, onEnd, rate } = {}) {
+  stopAll();
+  try {
+    let blob = null;
+    if (typeof caches !== 'undefined') {
+      const cache = await caches.open(CLIP_CACHE);
+      const hit = await cache.match(url);
+      if (hit) blob = await hit.blob();
+      else {
+        const res = await fetch(url);
+        if (!res.ok) return false;
+        const keep = res.clone();               // clone BEFORE reading the body
+        blob = await res.blob();
+        if (blob.size < 512) return false;
+        caches.open(CLIP_CACHE).then(c => c.put(url, keep));
+      }
+    } else {
+      const res = await fetch(url);
+      if (!res.ok) return false;
+      blob = await res.blob();
+      if (blob.size < 512) return false;
+    }
+    const a = new Audio(URL.createObjectURL(blob));
+    currentAudio = a;
+    if (rate && rate > 0 && rate !== 1) a.playbackRate = rate;
+    if (onStart) a.addEventListener('playing', onStart, { once: true });
+    if (onEnd) a.addEventListener('ended', onEnd, { once: true });
+    await a.play();
+    return true;
+  } catch (e) {
+    currentAudio = null;
+    return false;
+  }
+}
+
+function noVoiceNotice() {
+  if (noVoiceWarned) return;
+  noVoiceWarned = true;
+  import('./ui.js').then(({ toast }) => {
+    toast('Sem voz árabe no aparelho — abra "Ajuda de áudio" para ativar a voz offline', { icon: 'fa-volume-xmark', ms: 6000 });
+  });
+}
+
+/* ── Ajuda: guia para ativar a voz do aparelho ── */
 export function openAudioHelp() {
   import('./ui.js').then(({ toast, openModal }) => {
     const content = openModal(`
       <div class="center">
         <div style="font-size:42px">🔊</div>
         <h3 style="margin:6px 0 4px">Sem som? Ative a voz árabe do aparelho</h3>
-        <p class="small muted">O áudio usa a voz instalada no próprio celular. Basta ativar uma vez:</p>
+        <p class="small muted">O app toca os áudios gravados do próprio site (funciona em qualquer aparelho). Para ouvir <b>offline</b> sem internet, ative a voz do celular:</p>
       </div>
 
       <div class="card mt-2" style="padding:16px 18px">
@@ -57,29 +103,46 @@ export function openAudioHelp() {
       <button class="btn primary mt-3" id="audio-retest" style="width:100%"><i class="fa-solid fa-volume-high"></i> Testar de novo</button>
       <p class="small muted mt-1 center"><i class="fa-solid fa-lightbulb"></i> Se abriu pelo Instagram/WhatsApp, use o <b>Chrome</b> ou <b>Safari</b> direto</p>
     `);
-    content.querySelector('#audio-retest')?.addEventListener('click', () => {
-      speakArabic('مَرْحَبًا! هَذَا صَوْتُ الْعَرَبِيَّةِ');
-      if (arabicVoice()) toast('Tudo certo! Áudio ativado 🎧', { icon: 'fa-check', type: 'success' });
-      else toast('Ainda sem voz árabe — siga os passos acima', { icon: 'fa-volume-xmark', ms: 4500 });
+    content.querySelector('#audio-retest')?.addEventListener('click', async () => {
+      const ok = await speakArabic('مَرْحَبًا');
+      toast(
+        ok ? 'Funcionou! 🎧' : 'Sem áudio — siga os passos acima',
+        { icon: ok ? 'fa-check' : 'fa-volume-xmark', type: ok ? 'success' : '', ms: 4500 }
+      );
     });
   });
 }
 
-function warnNoArabicVoice() {
-  if (noVoiceWarned) return;
-  noVoiceWarned = true;
-  openAudioHelp();
-  import('./ui.js').then(({ toast }) => {
-    toast('Sem voz árabe no aparelho — siga o guia na tela', { icon: 'fa-volume-xmark', ms: 5000 });
-  });
+/* ── Orquestrador: clipe → voz do aparelho → aviso ── */
+export async function speakArabic(text, rate, cb) {
+  const opts = { lang: 'ar', rate: rate ?? 0.85, ...(cb || {}) };
+  if (!text) return false;
+
+  /* 1) clipe gravado (qualidade constante, funciona em qualquer aparelho) */
+  try {
+    const { getClipIndex } = await import('./data.js');
+    const url = (await getClipIndex())[(text || '').trim()];
+    if (url) {
+      const ok = await playClip(url, opts);
+      if (ok) return true;
+    }
+  } catch (e) { /* segue para a voz do aparelho */ }
+
+  /* 2) voz do aparelho (offline) */
+  const v = arabicVoice();
+  playDevice(text, opts, v);
+  if (v) return true;
+
+  /* 3) nada disponível → fala às cegas (alguns motores ainda tocam) + aviso */
+  noVoiceNotice();
+  return false;
 }
 
-export function speak(text, { lang = 'ar', rate = 0.85, onStart, onEnd } = {}) {
-  if (!isSupported() || !text) return null;
+/* device voice utterance (with the mobile cancel→speak race fix) */
+function playDevice(text, { lang = 'ar', rate = 0.85, onStart, onEnd } = {}, v) {
+  if (!isSupported()) return null;
   const synth = window.speechSynthesis;
   const isAr = lang.startsWith('ar');
-  const v = isAr ? arabicVoice() : null;
-  if (isAr && !v) warnNoArabicVoice();
 
   const u = new SpeechSynthesisUtterance(text);
   if (v) u.voice = v;
@@ -107,12 +170,18 @@ export function speak(text, { lang = 'ar', rate = 0.85, onStart, onEnd } = {}) {
   return u;
 }
 
-export function speakArabic(text, rate, cb) {
-  return speak(text, { lang: 'ar', rate: rate ?? 0.85, ...cb });
+export function speak(text, { lang = 'ar', rate = 0.85, onStart, onEnd } = {}) {
+  if (lang.startsWith('ar')) return speakArabic(text, rate, { onStart, onEnd });
+  return playDevice(text, { lang, rate, onStart, onEnd }, null);
 }
 
 export function stopAll() {
   window.speechSynthesis?.cancel();
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+    currentAudio = null;
+  }
 }
 
 /* preload voices (Chrome populates the list asynchronously) */
