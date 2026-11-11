@@ -1,0 +1,208 @@
+{
+  "meta": {
+    "title": "Verbs Essenciais — الأَفْعَال",
+    "intro": "Os 20 verbos mais úteis do árabe, no passado, presente e imperativo. O árabe conjuga o verbo para cada pessoa — comece memorizando a raiz (3 letras)."
+  },
+  "verbs": [
+    {
+      "id": 1, "plain": "كتب", "base": "كَتَبَ", "translit": "kataba", "meaning": "escrever", "type": "regular",
+      "conjugation": {
+        "past": { "ele": ["كَتَبَ", "kataba"], "ela": ["كَتَبَتْ", "katabat"], "eu": ["كَتَبْتُ", "katabtu"], "nós": ["كَتَبْنَا", "katabnā"], "você": ["كَتَبْتَ", "katabta"], "eles": ["كَتَبُوا", "katabū"] },
+        "present": { "ele": ["يَكْتُبُ", "yaktubu"], "ela": ["تَكْتُبُ", "taktubu"], "eu": ["أَكْتُبُ", "aktubu"], "nós": ["نَكْتُبُ", "naktubu"], "você": ["تَكْتُبُ", "taktubu"], "eles": ["يَكْتُبُونَ", "yaktubūna"] },
+        "imperative": ["اُكْتُبْ", "uktub", "escreva!"],
+        "masdar": ["كِتَابَة", "kitāba", "ato de escrever"]
+      },
+      "example": { "ar": "أَكْتُبُ الدَّرْسَ كُلَّ يَوْمٍ.", "translit": "aktubu d-darsa kulla yawmin.", "pt": "Eu escrevo a lição todos os dias." }
+    },
+    {
+      "id": 2, "plain": "درس", "base": "دَرَسَ", "translit": "darasa", "meaning": "estudar", "type": "regular",
+      "conjugation": {
+        "past": { "ele": ["دَرَسَ", "darasa"], "ela": ["دَرَسَتْ", "darasat"], "eu": ["دَرَسْتُ", "darastu"], "nós": ["دَرَسْنَا", "darasnā"], "você": ["دَرَسْتَ", "darasta"], "eles": ["دَرَسُوا", "darasū"] },
+        "present": { "ele": ["يَدْرُسُ", "yadrusu"], "ela": ["تَدْرُسُ", "tadrusu"], "eu": ["أَدْرُسُ", "adrusu"], "nós": ["نَدْرُسُ", "nadrusu"], "você": ["تَدْرُسُ", "tadrusu"], "eles": ["يَدْرُسُونَ", "yadrusūna"] },
+        "imperative": ["اُدْرُسْ", "udrus", "estude!"],
+        "masdar": ["دِرَاسَة", "dirāsa", "estudo"]
+      },
+      "example": { "ar": "أَدْرُسُ الْعَرَبِيَّةَ كُلَّ يَوْمٍ.", "translit": "adrusu l-ʿarabiyyata kulla yawmin.", "pt": "Eu estudo árabe todos os dias." }
+    },
+    {
+      "id": 3, "plain": "عمل", "base": "عَمِلَ", "translit": "ʿamila", "meaning": "trabalhar / fazer", "type": "regular",
+      "conjugation": {
+        "past": { "ele": ["عَمِلَ", "ʿamila"], "ela": ["عَمِلَتْ", "ʿamilat"], "eu": ["عَمِلْتُ", "ʿamiltu"], "nós": ["عَمِلْنَا", "ʿamilnā"], "você": ["عَمِلْتَ", "ʿamilta"], "eles": ["عَمِلُوا", "ʿamilū"] },
+        "present": { "ele": ["يَعْمَلُ", "yaʿmalu"], "ela": ["تَعْمَلُ", "taʿmalu"], "eu": ["أَعْمَلُ", "aʿmalu"], "nós": ["نَعْمَلُ", "naʿmalu"], "você": ["تَعْمَلُ", "taʿmalu"], "eles": ["يَعْمَلُونَ", "yaʿmalūna"] },
+        "imperative": ["اِعْمَلْ", "iʿmal", "trabalhe!"],
+        "masdar": ["عَمَل", "ʿamal", "trabalho"]
+      },
+      "example": { "ar": "أَعْمَلُ فِي شَرِكَةٍ كَبِيرَةٍ.", "translit": "aʿmalu fī sharikatin kabīratin.", "pt": "Eu trabalho em uma empresa grande." }
+    },
+    {
+      "id": 4, "plain": "كان", "base": "كَانَ", "translit": "kāna", "meaning": "ser / estar (passado, permanente)", "type": "irregular (defectivo)",
+      "conjugation": {
+        "past": { "ele": ["كَانَ", "kāna"], "ela": ["كَانَتْ", "kānat"], "eu": ["كُنْتُ", "kuntu"], "nós": ["كُنَّا", "kunnā"], "você": ["كُنْتَ", "kunta"], "eles": ["كَانُوا", "kānū"] },
+        "present": { "ele": ["يَكُونُ", "yakūnu"], "ela": ["تَكُونُ", "takūnu"], "eu": ["أَكُونُ", "akūnu"], "nós": ["نَكُونُ", "nakūnu"], "você": ["تَكُونُ", "takūnu"], "eles": ["يَكُونُونَ", "yakūnūna"] },
+        "imperative": ["كُنْ", "kun", "seja!"],
+        "masdar": ["كَوْن", "kawn", "existência"]
+      },
+      "example": { "ar": "كُنْتُ فِي الْمَدِينَةِ أَمْسِ.", "translit": "kuntu fī l-madīnati amsi.", "pt": "Eu estava na cidade ontem." }
+    },
+    {
+      "id": 5, "plain": "ذهب", "base": "ذَهَبَ", "translit": "dhahaba", "meaning": "ir", "type": "regular",
+      "conjugation": {
+        "past": { "ele": ["ذَهَبَ", "dhahaba"], "ela": ["ذَهَبَتْ", "dhahabat"], "eu": ["ذَهَبْتُ", "dhahabtu"], "nós": ["ذَهَبْنَا", "dhahabnā"], "você": ["ذَهَبْتَ", "dhahabta"], "eles": ["ذَهَبُوا", "dhahabū"] },
+        "present": { "ele": ["يَذْهَبُ", "yadhhabu"], "ela": ["تَذْهَبُ", "tadhhabu"], "eu": ["أَذْهَبُ", "adhhabu"], "nós": ["نَذْهَبُ", "nadhhabu"], "você": ["تَذْهَبُ", "tadhhabu"], "eles": ["يَذْهَبُونَ", "yadhhabūna"] },
+        "imperative": ["اِذْهَبْ", "idhhab", "vá!"],
+        "masdar": ["ذَهَاب", "dhahāb", "ato de ir"]
+      },
+      "example": { "ar": "أَذْهَبُ إِلَى السُّوقِ فِي الصَّبَاحِ.", "translit": "adhhabu ilā s-sūqi fī ṣ-ṣabāḥi.", "pt": "Vou ao mercado de manhã." }
+    },
+    {
+      "id": 6, "plain": "جاء", "base": "جَاءَ", "translit": "jāʾa", "meaning": "vir", "type": "irregular (defectivo)",
+      "conjugation": {
+        "past": { "ele": ["جَاءَ", "jāʾa"], "ela": ["جَاءَتْ", "jāʾat"], "eu": ["جِئْتُ", "jiʾtu"], "nós": ["جِئْنَا", "jiʾnā"], "você": ["جِئْتَ", "jiʾta"], "eles": ["جَاءُوا", "jāʾū"] },
+        "present": { "ele": ["يَأْتِي", "yaʾtī"], "ela": ["تَأْتِي", "taʾtī"], "eu": ["آتِي", "ātī"], "nós": ["نَأْتِي", "naʾtī"], "você": ["تَأْتِي", "taʾtī"], "eles": ["يَأْتُونَ", "yaʾtūna"] },
+        "imperative": ["تَعَالَ", "taʿāl", "venha!"],
+        "masdar": ["مَجِيء", "majīʾ", "ato de vir"]
+      },
+      "example": { "ar": "تَعَالَ إِلَى الْبَيْتِ مَسَاءً!", "translit": "taʿāl ilā l-bayti masāʾan!", "pt": "Venha para casa à noite!" }
+    },
+    {
+      "id": 7, "plain": "أكل", "base": "أَكَلَ", "translit": "akala", "meaning": "comer", "type": "regular (hamzado)",
+      "conjugation": {
+        "past": { "ele": ["أَكَلَ", "akala"], "ela": ["أَكَلَتْ", "akalat"], "eu": ["أَكَلْتُ", "akaltu"], "nós": ["أَكَلْنَا", "akalnā"], "você": ["أَكَلْتَ", "akalta"], "eles": ["أَكَلُوا", "akalū"] },
+        "present": { "ele": ["يَأْكُلُ", "yaʾkulu"], "ela": ["تَأْكُلُ", "taʾkulu"], "eu": ["آكُلُ", "ākulu"], "nós": ["نَأْكُلُ", "naʾkulu"], "você": ["تَأْكُلُ", "taʾkulu"], "eles": ["يَأْكُلُونَ", "yaʾkulūna"] },
+        "imperative": ["كُلْ", "kul", "coma!"],
+        "masdar": ["أَكْل", "akl", "refeição"]
+      },
+      "example": { "ar": "آكُلُ الْخُبْزَ مَعَ الْجُبْنِ.", "translit": "ākulu l-khubza maʿa l-jubni.", "pt": "Como pão com queijo." }
+    },
+    {
+      "id": 8, "plain": "شرب", "base": "شَرِبَ", "translit": "shariba", "meaning": "beber", "type": "regular",
+      "conjugation": {
+        "past": { "ele": ["شَرِبَ", "shariba"], "ela": ["شَرِبَتْ", "sharibat"], "eu": ["شَرِبْتُ", "sharibtu"], "nós": ["شَرِبْنَا", "sharibnā"], "você": ["شَرِبْتَ", "sharibta"], "eles": ["شَرِبُوا", "sharibū"] },
+        "present": { "ele": ["يَشْرَبُ", "yashrabu"], "ela": ["تَشْرَبُ", "tashrabu"], "eu": ["أَشْرَبُ", "ashrabu"], "nós": ["نَشْرَبُ", "nashrabu"], "você": ["تَشْرَبُ", "tashrabu"], "eles": ["يَشْرَبُونَ", "yashrabūna"] },
+        "imperative": ["اِشْرَبْ", "ishrab", "beba!"],
+        "masdar": ["شُرْب", "shurb", "ato de beber"]
+      },
+      "example": { "ar": "أَشْرَبُ الْقَهْوَةَ صَبَاحاً.", "translit": "ashrabu l-qahwata ṣabāḥan.", "pt": "Bebo café de manhã." }
+    },
+    {
+      "id": 9, "plain": "قرأ", "base": "قَرَأَ", "translit": "qaraʾa", "meaning": "ler", "type": "regular (hamzado)",
+      "conjugation": {
+        "past": { "ele": ["قَرَأَ", "qaraʾa"], "ela": ["قَرَأَتْ", "qaraʾat"], "eu": ["قَرَأْتُ", "qaraʾtu"], "nós": ["قَرَأْنَا", "qaraʾnā"], "você": ["قَرَأْتَ", "qaraʾta"], "eles": ["قَرَأُوا", "qaraʾū"] },
+        "present": { "ele": ["يَقْرَأُ", "yaqraʾu"], "ela": ["تَقْرَأُ", "taqraʾu"], "eu": ["أَقْرَأُ", "aqraʾu"], "nós": ["نَقْرَأُ", "naqraʾu"], "você": ["تَقْرَأُ", "taqraʾu"], "eles": ["يَقْرَأُونَ", "yaqraʾūna"] },
+        "imperative": ["اِقْرَأْ", "iqraʾ", "leia!"],
+        "masdar": ["قِرَاءَة", "qirāʾa", "leitura"]
+      },
+      "example": { "ar": "أَقْرَأُ الْكِتَابَ فِي اللَّيْلِ.", "translit": "aqraʾu l-kitāba fī l-layli.", "pt": "Leio o livro à noite." }
+    },
+    {
+      "id": 10, "plain": "رأى", "base": "رَأَى", "translit": "raʾā", "meaning": "ver", "type": "irregular (oco)",
+      "conjugation": {
+        "past": { "ele": ["رَأَى", "raʾā"], "ela": ["رَأَتْ", "raʾat"], "eu": ["رَأَيْتُ", "raʾaytu"], "nós": ["رَأَيْنَا", "raʾaynā"], "você": ["رَأَيْتَ", "raʾayta"], "eles": ["رَأَوْا", "raʾaw"] },
+        "present": { "ele": ["يَرَى", "yarā"], "ela": ["تَرَى", "tarā"], "eu": ["أَرَى", "arā"], "nós": ["نَرَى", "narā"], "você": ["تَرَى", "tarā"], "eles": ["يَرَوْنَ", "yarawna"] },
+        "imperative": ["رَ", "ar", "veja! (raro)"],
+        "masdar": ["رُؤْيَة", "ruʾya", "visão"]
+      },
+      "example": { "ar": "رَأَيْتُ صَدِيقِي فِي السُّوقِ.", "translit": "raʾaytu ṣadīqī fī s-sūqi.", "pt": "Vi meu amigo no mercado." }
+    },
+    {
+      "id": 11, "plain": "قال", "base": "قَالَ", "translit": "qāla", "meaning": "dizer", "type": "irregular (oco)",
+      "conjugation": {
+        "past": { "ele": ["قَالَ", "qāla"], "ela": ["قَالَتْ", "qālat"], "eu": ["قُلْتُ", "qultu"], "nós": ["قُلْنَا", "qulnā"], "você": ["قُلْتَ", "qulta"], "eles": ["قَالُوا", "qālū"] },
+        "present": { "ele": ["يَقُولُ", "yaqūlu"], "ela": ["تَقُولُ", "taqūlu"], "eu": ["أَقُولُ", "aqūlu"], "nós": ["نَقُولُ", "naqūlu"], "você": ["تَقُولُ", "taqūlu"], "eles": ["يَقُولُونَ", "yaqūlūna"] },
+        "imperative": ["قُلْ", "qul", "diga!"],
+        "masdar": ["قَوْل", "qawl", "fala"]
+      },
+      "example": { "ar": "قَالَ إِنَّهُ سَيَأْتِي غَداً.", "translit": "qāla innahu sayātī ghadan.", "pt": "Ele disse que virá amanhã." }
+    },
+    {
+      "id": 12, "plain": "سمع", "base": "سَمِعَ", "translit": "samiʿa", "meaning": "ouvir", "type": "regular",
+      "conjugation": {
+        "past": { "ele": ["سَمِعَ", "samiʿa"], "ela": ["سَمِعَتْ", "samiʿat"], "eu": ["سَمِعْتُ", "samiʿtu"], "nós": ["سَمِعْنَا", "samiʿnā"], "você": ["سَمِعْتَ", "samiʿta"], "eles": ["سَمِعُوا", "samiʿū"] },
+        "present": { "ele": ["يَسْمَعُ", "yasmaʿu"], "ela": ["تَسْمَعُ", "tasmaʿu"], "eu": ["أَسْمَعُ", "asmaʿu"], "nós": ["نَسْمَعُ", "nasmaʿu"], "você": ["تَسْمَعُ", "tasmaʿu"], "eles": ["يَسْمَعُونَ", "yasmaʿūna"] },
+        "imperative": ["اِسْمَعْ", "ismaʿ", "ouça!"],
+        "masdar": ["سَمْع", "samʿ", "audição"]
+      },
+      "example": { "ar": "أَسْمَعُ الْمُؤَذِّنَ مِنَ الْمَسْجِدِ.", "translit": "asmaʿu l-muʾadhdhina mina l-masjidi.", "pt": "Ouço o muezzin da mesquita." }
+    },
+    {
+      "id": 13, "plain": "عرف", "base": "عَرَفَ", "translit": "ʿarafa", "meaning": "saber / conhecer", "type": "regular",
+      "conjugation": {
+        "past": { "ele": ["عَرَفَ", "ʿarafa"], "ela": ["عَرَفَتْ", "ʿarafat"], "eu": ["عَرَفْتُ", "ʿaraftu"], "nós": ["عَرَفْنَا", "ʿarafnā"], "você": ["عَرَفْتَ", "ʿarafta"], "eles": ["عَرَفُوا", "ʿarafū"] },
+        "present": { "ele": ["يَعْرِفُ", "yaʿrifu"], "ela": ["تَعْرِفُ", "taʿrifu"], "eu": ["أَعْرِفُ", "aʿrifu"], "nós": ["نَعْرِفُ", "naʿrifu"], "você": ["تَعْرِفُ", "taʿrifu"], "eles": ["يَعْرِفُونَ", "yaʿrifūna"] },
+        "imperative": ["اِعْرِفْ", "iʿrif", "saiba!"],
+        "masdar": ["مَعْرِفَة", "maʿrifa", "conhecimento"]
+      },
+      "example": { "ar": "أَعْرِفُ رَجُلاً مِنَ الْمَغْرِبِ.", "translit": "aʿrifu rajulan mina l-Maghribi.", "pt": "Conheço um homem do Marrocos." }
+    },
+    {
+      "id": 14, "plain": "فهم", "base": "فَهِمَ", "translit": "fahima", "meaning": "entender", "type": "regular",
+      "conjugation": {
+        "past": { "ele": ["فَهِمَ", "fahima"], "ela": ["فَهِمَتْ", "fahimat"], "eu": ["فَهِمْتُ", "fahimtu"], "nós": ["فَهِمْنَا", "fahimnā"], "você": ["فَهِمْتَ", "fahimta"], "eles": ["فَهِمُوا", "fahimū"] },
+        "present": { "ele": ["يَفْهَمُ", "yafhamu"], "ela": ["تَفْهَمُ", "tafhamu"], "eu": ["أَفْهَمُ", "afhamu"], "nós": ["نَفْهَمُ", "nafhamu"], "você": ["تَفْهَمُ", "tafhamu"], "eles": ["يَفْهَمُونَ", "yafhamūna"] },
+        "imperative": ["اِفْهَمْ", "ifham", "entenda!"],
+        "masdar": ["فَهْم", "fahm", "compreensão"]
+      },
+      "example": { "ar": "هَلْ فَهِمْتَ الدَّرْسَ؟", "translit": "hal fahimta d-darsa?", "pt": "Você entendeu a lição?" }
+    },
+    {
+      "id": 15, "plain": "أحب", "base": "أَحَبَّ", "translit": "aḥabba", "meaning": "amar / gostar", "type": "regular (com shadda)",
+      "conjugation": {
+        "past": { "ele": ["أَحَبَّ", "aḥabba"], "ela": ["أَحَبَّتْ", "aḥabbat"], "eu": ["أَحْبَبْتُ", "aḥbabtu"], "nós": ["أَحْبَبْنَا", "aḥbabnā"], "você": ["أَحْبَبْتَ", "aḥbabta"], "eles": ["أَحَبُّوا", "aḥabbū"] },
+        "present": { "ele": ["يُحِبُّ", "yuḥibbu"], "ela": ["تُحِبُّ", "tuḥibbu"], "eu": ["أُحِبُّ", "uḥibbu"], "nós": ["نُحِبُّ", "nuḥibbu"], "você": ["تُحِبُّ", "tuḥibbu"], "eles": ["يُحِبُّونَ", "yuḥibbūna"] },
+        "imperative": ["أَحْبِبْ", "aḥbib", "ame!"],
+        "masdar": ["مَحَبَّة", "maḥabba", "amor"]
+      },
+      "example": { "ar": "أُحِبُّ تَعَلُّمَ اللُّغَاتِ.", "translit": "uḥibbu taʿalluma l-lughāti.", "pt": "Amo aprender línguas." }
+    },
+    {
+      "id": 16, "plain": "ذكر", "base": "ذَكَرَ", "translit": "dhakara", "meaning": "lembrar / mencionar", "type": "regular",
+      "conjugation": {
+        "past": { "ele": ["ذَكَرَ", "dhakara"], "ela": ["ذَكَرَتْ", "dhakarat"], "eu": ["ذَكَرْتُ", "dhakartu"], "nós": ["ذَكَرْنَا", "dhakarnā"], "você": ["ذَكَرْتَ", "dhakarta"], "eles": ["ذَكَرُوا", "dhakarū"] },
+        "present": { "ele": ["يَذْكُرُ", "yadhkuru"], "ela": ["تَذْكُرُ", "tadhkuru"], "eu": ["أَذْكُرُ", "adhkuru"], "nós": ["نَذْكُرُ", "nadhkuru"], "você": ["تَذْكُرُ", "tadhkuru"], "eles": ["يَذْكُرُونَ", "yadhkurūna"] },
+        "imperative": ["اُذْكُرْ", "udhkur", "lembre!"],
+        "masdar": ["ذِكْر", "dhikr", "menção / lembrança"]
+      },
+      "example": { "ar": "أَذْكُرُ دَرْسَ الْأَمْسِ.", "translit": "adhkuru darsa l-amsi.", "pt": "Lembro da lição de ontem." }
+    },
+    {
+      "id": 17, "plain": "دخل", "base": "دَخَلَ", "translit": "dakhala", "meaning": "entrar", "type": "regular",
+      "conjugation": {
+        "past": { "ele": ["دَخَلَ", "dakhala"], "ela": ["دَخَلَتْ", "dakhalat"], "eu": ["دَخَلْتُ", "dakhaltu"], "nós": ["دَخَلْنَا", "dakhalnā"], "você": ["دَخَلْتَ", "dakhalta"], "eles": ["دَخَلُوا", "dakhalū"] },
+        "present": { "ele": ["يَدْخُلُ", "yadkhulu"], "ela": ["تَدْخُلُ", "tadkhulu"], "eu": ["أَدْخُلُ", "adkhulu"], "nós": ["نَدْخُلُ", "nadkhulu"], "você": ["تَدْخُلُ", "tadkhulu"], "eles": ["يَدْخُلُونَ", "yadkhulūna"] },
+        "imperative": ["اُدْخُلْ", "udkhul", "entre!"],
+        "masdar": ["دُخُول", "dukhūl", "entrada"]
+      },
+      "example": { "ar": "دَخَلْتُ الْمَسْجِدَ مَعَ صَدِيقِي.", "translit": "dakhaltu l-masjida maʿa ṣadīqī.", "pt": "Entrei na mesquita com meu amigo." }
+    },
+    {
+      "id": 18, "plain": "خرج", "base": "خَرَجَ", "translit": "kharaja", "meaning": "sair", "type": "regular",
+      "conjugation": {
+        "past": { "ele": ["خَرَجَ", "kharaja"], "ela": ["خَرَجَتْ", "kharajat"], "eu": ["خَرَجْتُ", "kharajtu"], "nós": ["خَرَجْنَا", "kharajnā"], "você": ["خَرَجْتَ", "kharajta"], "eles": ["خَرَجُوا", "kharajū"] },
+        "present": { "ele": ["يَخْرُجُ", "yakhruju"], "ela": ["تَخْرُجُ", "takhruju"], "eu": ["أَخْرُجُ", "akhruju"], "nós": ["نَخْرُجُ", "nakhruju"], "você": ["تَخْرُجُ", "takhruju"], "eles": ["يَخْرُجُونَ", "yakhrujūna"] },
+        "imperative": ["اُخْرُجْ", "ukhruj", "saia!"],
+        "masdar": ["خُرُوج", "khurūj", "saída"]
+      },
+      "example": { "ar": "نَخْرُجُ مِنَ الْمَدِينَةِ فِي الْمَسَاءِ.", "translit": "nakhruju mina l-madīnati fī l-masāʾi.", "pt": "Saímos da cidade à noite." }
+    },
+    {
+      "id": 19, "plain": "سافر", "base": "سَافَرَ", "translit": "sāfara", "meaning": "viajar", "type": "regular (Forma III)",
+      "conjugation": {
+        "past": { "ele": ["سَافَرَ", "sāfara"], "ela": ["سَافَرَتْ", "sāfarat"], "eu": ["سَافَرْتُ", "sāfartu"], "nós": ["سَافَرْنَا", "sāfarnā"], "você": ["سَافَرْتَ", "sāfarta"], "eles": ["سَافَرُوا", "sāfarū"] },
+        "present": { "ele": ["يُسَافِرُ", "yusāfiru"], "ela": ["تُسَافِرُ", "tusāfiru"], "eu": ["أُسَافِرُ", "usāfiru"], "nós": ["نُسَافِرُ", "nusāfiru"], "você": ["تُسَافِرُ", "tusāfiru"], "eles": ["يُسَافِرُونَ", "yusāfirūna"] },
+        "imperative": ["سَافِرْ", "sāfir", "viaje!"],
+        "masdar": ["سَفَر", "safar", "viagem"]
+      },
+      "example": { "ar": "سَأَسَافِرُ إِلَى مِصْرَ فِي الصَّيْفِ.", "translit": "sa-asāfiru ilā Miṣra fī ṣ-ṣayfi.", "pt": "Viajarei ao Egito no verão." }
+    },
+    {
+      "id": 20, "plain": "أراد", "base": "أَرَادَ", "translit": "arāda", "meaning": "querer", "type": "irregular (oco)",
+      "conjugation": {
+        "past": { "ele": ["أَرَادَ", "arāda"], "ela": ["أَرَادَتْ", "arādat"], "eu": ["أَرَدْتُ", "arattu"], "nós": ["أَرَدْنَا", "aradnā"], "você": ["أَرَدْتَ", "aradta"], "eles": ["أَرَادُوا", "arādū"] },
+        "present": { "ele": ["يُرِيدُ", "yurīdu"], "ela": ["تُرِيدُ", "turīdu"], "eu": ["أُرِيدُ", "urīdu"], "nós": ["نُرِيدُ", "nurīdu"], "você": ["تُرِيدُ", "turīdu"], "eles": ["يُرِيدُونَ", "yurīdūna"] },
+        "imperative": ["—", "—", "raro no imperativo"],
+        "masdar": ["إِرَادَة", "irāda", "vontade"]
+      },
+      "example": { "ar": "أُرِيدُ أَنْ أَتَعَلَّمَ الْعَرَبِيَّةَ.", "translit": "urīdu an ataʿallama l-ʿarabiyyata.", "pt": "Quero aprender árabe." }
+    }
+  ]
+}

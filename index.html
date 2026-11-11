@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Arabesco — Aprenda Árabe | الأَرَبِسْكُو</title>
+  <meta name="description" content="Aprenda árabe padrão moderno com 5.000 palavras, flashcards inteligentes, alfabeto interativo e repetição espaçada. Feito para falantes de português do Brasil.">
+  <meta name="theme-color" content="#0E5C43">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/design-system.css">
+  <script>
+    // Anti-flash theme boot
+    document.documentElement.dataset.theme = localStorage.getItem('arabesco_theme') || 'light';
+  </script>
+</head>
+<body>
+
+<div class="app">
+  <!-- ═══════════ Sidebar (desktop) ═══════════ -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-star"><i class="fa-solid fa-star-and-crescent"></i></div>
+      <div>
+        <h1>Arabe<span>sko</span></h1>
+        <small>ÁRABE PARA BRASILEIROS • العربية</small>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <div class="nav-label">Estudo</div>
+      <button class="nav-item active" data-view="dashboard"><i class="fa-solid fa-house"></i>Início</button>
+      <button class="nav-item" data-view="cards"><i class="fa-solid fa-clone"></i>Cartões</button>
+      <button class="nav-item" data-view="alphabet"><i class="fa-solid fa-font"></i>Alfabeto</button>
+      <button class="nav-item" data-view="quiz"><i class="fa-solid fa-bolt"></i>Quiz</button>
+      <div class="nav-label">Biblioteca</div>
+      <button class="nav-item" data-view="dict"><i class="fa-solid fa-book-open"></i>Dicionário</button>
+      <button class="nav-item" data-view="verbs"><i class="fa-solid fa-table-cells"></i>Verbos</button>
+      <button class="nav-item" data-view="phrases"><i class="fa-solid fa-comments"></i>Frases &amp; Diálogos</button>
+      <button class="nav-item" data-view="games"><i class="fa-solid fa-gamepad"></i>Jogos</button>
+      <div class="nav-label">Você</div>
+      <button class="nav-item" data-view="progress"><i class="fa-solid fa-chart-line"></i>Progresso</button>
+    </nav>
+
+    <div class="sidebar-foot">
+      <div class="mini-stats">
+        <div class="mini-stat"><i class="fa-solid fa-fire"></i><span id="mini-streak">0</span></div>
+        <div class="mini-stat"><i class="fa-solid fa-bolt"></i><span id="mini-xp">0</span></div>
+      </div>
+      <button class="theme-btn" id="theme-toggle"><i class="fa-solid fa-moon"></i><span>Modo noturno</span></button>
+    </div>
+  </aside>
+
+  <!-- ═══════════ Main ═══════════ -->
+  <main class="main">
+
+    <!-- ── DASHBOARD ── -->
+    <section class="view active" id="view-dashboard"></section>
+
+    <!-- ── FLASHCARDS ── -->
+    <section class="view" id="view-cards"></section>
+
+    <!-- ── ALPHABET ── -->
+    <section class="view" id="view-alphabet"></section>
+
+    <!-- ── QUIZ ── -->
+    <section class="view" id="view-quiz"></section>
+
+    <!-- ── DICTIONARY ── -->
+    <section class="view" id="view-dict"></section>
+
+    <!-- ── VERBS ── -->
+    <section class="view" id="view-verbs"></section>
+
+    <!-- ── PHRASES & DIALOGUES ── -->
+    <section class="view" id="view-phrases"></section>
+
+    <!-- ── GAMES ── -->
+    <section class="view" id="view-games"></section>
+
+    <!-- ── PROGRESS ── -->
+    <section class="view" id="view-progress"></section>
+
+  </main>
+
+  <!-- ═══════════ Mobile bottom nav ═══════════ -->
+  <nav class="bottom-nav">
+    <button class="bn-item active" data-view="dashboard"><i class="fa-solid fa-house"></i>Início</button>
+    <button class="bn-item" data-view="cards"><i class="fa-solid fa-clone"></i>Cartões</button>
+    <button class="bn-item" data-view="alphabet"><i class="fa-solid fa-font"></i>Alfabeto</button>
+    <button class="bn-item" data-view="quiz"><i class="fa-solid fa-bolt"></i>Quiz</button>
+    <button class="bn-item" id="more-btn"><i class="fa-solid fa-compass"></i>Mais</button>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="drawer" id="drawer">
+    <div class="scrim" id="drawer-scrim"></div>
+    <div class="sheet">
+      <h3><span>Explorar <span class="ar-display" style="font-size:16px">اِسْتَكْشِف</span></span><button class="chip" id="drawer-close"><i class="fa-solid fa-xmark"></i> Fechar</button></h3>
+      <div class="drawer-grid">
+        <button class="nav-item" data-view="dict"><i class="fa-solid fa-book-open"></i>Dicionário</button>
+        <button class="nav-item" data-view="verbs"><i class="fa-solid fa-table-cells"></i>Verbos</button>
+        <button class="nav-item" data-view="phrases"><i class="fa-solid fa-comments"></i>Frases &amp; Diálogos</button>
+        <button class="nav-item" data-view="games"><i class="fa-solid fa-gamepad"></i>Jogos</button>
+        <button class="nav-item" data-view="progress"><i class="fa-solid fa-chart-line"></i>Progresso</button>
+        <button class="theme-btn" id="theme-toggle-mobile" style="justify-content:center"><i class="fa-solid fa-moon"></i><span id="theme-lbl-m">Modo noturno</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modals mount point -->
+<div id="modal-root"></div>
+<div class="toast-wrap" id="toasts"></div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

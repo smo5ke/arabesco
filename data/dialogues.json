@@ -1,0 +1,105 @@
+{
+  "dialogues": [
+    {
+      "id": "airport",
+      "icon": "fa-plane-arrival",
+      "badge": "Viagem",
+      "titlePt": "No Aeroporto",
+      "titleAr": "فِي الْمَطَار",
+      "description": "Chegando no aeroporto do Cairo: passaporte, motivo da viagem e quanto tempo vai ficar.",
+      "lines": [
+        { "speaker": "ضَابِطُ الْجَوَازَات (Policial)", "ar": "مَرْحَباً بِكَ فِي الْمَطَارِ. جَوَازُ السَّفَرِ مِنْ فَضْلِكَ.", "translit": "marḥaban bika fī l-maṭāri. jawāz as-safari min faḍlika.", "pt": "Bem-vindo ao aeroporto. Seu passaporte, por favor." },
+        { "speaker": "السَّائِح (Turista)", "ar": "تَفَضَّل. هَذَا جَوَازُ سَفَرِي.", "translit": "tafaḍḍal. hādhā jawāz safarī.", "pt": "Aqui está. Este é meu passaporte." },
+        { "speaker": "ضَابِطُ الْجَوَازَات (Policial)", "ar": "مَا هُوَ سَبَبُ زِيَارَتِكَ؟", "translit": "mā huwa sababu ziyāratika?", "pt": "Qual é o motivo da sua visita?" },
+        { "speaker": "السَّائِح (Turista)", "ar": "جِئْتُ لِلتَّعَلُّمِ وَالسِّيَاحَةِ.", "translit": "jiʾtu li-t-taʿallumi wa-s-siyāḥati.", "pt": "Vim para estudar e fazer turismo." },
+        { "speaker": "ضَابِطُ الْجَوَازَات (Policial)", "ar": "كَمْ يَوْماً سَتَبْقَى هُنَا؟", "translit": "kam yawman satabqā hunā?", "pt": "Quantos dias vai ficar aqui?" },
+        { "speaker": "السَّائِح (Turista)", "ar": "سَأَبْقَى ثَلَاثَةَ أَشْهُرٍ.", "translit": "sa-abqā thalāthata ashhurin.", "pt": "Ficarei três meses." },
+        { "speaker": "ضَابِطُ الْجَوَازَات (Policial)", "ar": "مَرْحَباً بِكَ! رِحْلَةً سَعِيدَةً.", "translit": "marḥaban bika! riḥlatan saʿīdatan.", "pt": "Bem-vindo! Boa viagem." }
+      ]
+    },
+    {
+      "id": "hotel",
+      "icon": "fa-hotel",
+      "badge": "Hospedagem",
+      "titlePt": "No Hotel",
+      "titleAr": "فِي الْفُنْدُق",
+      "description": "Fazendo o check-in: reserva, quarto com internet e o horário do restaurante.",
+      "lines": [
+        { "speaker": "مُوَظَّفُ الْفُنْدُق (Recepcionista)", "ar": "أَهْلاً وَسَهْلاً! هَلْ لَدَيْكَ حَجْزٌ؟", "translit": "ahlan wa-sahlan! hal ladayka ḥajzun?", "pt": "Olá! Você tem reserva?" },
+        { "speaker": "الضَّيْف (Hóspede)", "ar": "نَعَمْ، لَدَيَّ حَجْزٌ بِاسْمِ سِلْفَا.", "translit": "naʿam, ladayya ḥajzun bismi Sīlfā.", "pt": "Sim, tenho reserva no nome Silva." },
+        { "speaker": "مُوَظَّفُ الْفُنْدُق (Recepcionista)", "ar": "غُرْفَةٌ لِشَخْصٍ وَاحِدٍ لِثَلَاثَةِ لَيَالٍ.", "translit": "ghurfatun li-shakhṣin wāḥidin li-thalāthati layālin.", "pt": "Quarto para uma pessoa, por três noites." },
+        { "speaker": "الضَّيْف (Hóspede)", "ar": "هَلِ الْغُرْفَةُ فِيهَا إِنْتَرْنِتْ؟", "translit": "hal al-ghurfa fīhā internet?", "pt": "O quarto tem internet?" },
+        { "speaker": "مُوَظَّفُ الْفُنْدُق (Recepcionista)", "ar": "نَعَمْ، وَالْمَطْعَمُ يَفْتَحُ فِي السَّابِعَةِ.", "translit": "naʿam, wa-l-maṭʿamu yaftaḥu fī s-sābiʿati.", "pt": "Sim, e o restaurante abre às sete." },
+        { "speaker": "مُوَظَّفُ الْفُنْدُق (Recepcionista)", "ar": "هَذَا مِفْتَاحُ غُرْفَتِكَ. مَسَاءُ الْخَيْرِ.", "translit": "hādhā miftāḥu ghurfatika. masāʾu l-khayri.", "pt": "Esta é a chave do seu quarto. Boa noite." },
+        { "speaker": "الضَّيْف (Hóspede)", "ar": "شُكْراً جَزِيلاً!", "translit": "shukran jazīlan!", "pt": "Muito obrigado!" }
+      ]
+    },
+    {
+      "id": "restaurant",
+      "icon": "fa-utensils",
+      "badge": "Comida",
+      "titlePt": "No Restaurante",
+      "titleAr": "فِي الْمَطْعَم",
+      "description": "Pedindo comida, bebida e a conta como um brasileiro de verdade.",
+      "lines": [
+        { "speaker": "النَّادِل (Garçom)", "ar": "مَسَاءُ الْخَيْرِ! مَاذَا تُرِيدُ أَنْ تَأْكُلَ؟", "translit": "masāʾu l-khayri! mādhā turīdu an taʾkula?", "pt": "Boa noite! O que gostaria de comer?" },
+        { "speaker": "الزَّبُون (Cliente)", "ar": "أُرِيدُ الدَّجَاجَ مَعَ الْأَرُزِّ مِنْ فَضْلِكَ.", "translit": "urīdu d-dajāja maʿa l-aruzzi min faḍlika.", "pt": "Quero frango com arroz, por favor." },
+        { "speaker": "النَّادِل (Garçom)", "ar": "وَمَاذَا تَشْرَبُ؟", "translit": "wa-mādhā tashrabu?", "pt": "E o que vai beber?" },
+        { "speaker": "الزَّبُون (Cliente)", "ar": "مَاءٌ بَارِدٌ، شُكْراً.", "translit": "māʾun bāridun, shukran.", "pt": "Água gelada, obrigado." },
+        { "speaker": "النَّادِل (Garçom)", "ar": "هَلْ كَانَ الطَّعَامُ جَمِيلاً؟", "translit": "hal kāna ṭ-ṭaʿāmu jamīlan?", "pt": "A comida estava boa?" },
+        { "speaker": "الزَّبُون (Cliente)", "ar": "نَعَمْ، رَائِعٌ! الْحِسَابُ لَوْ سَمَحْتَ.", "translit": "naʿam, rāʾiʿun! al-ḥisābu law samaḥta.", "pt": "Sim, espetacular! A conta, por favor." }
+      ]
+    },
+    {
+      "id": "market",
+      "icon": "fa-store",
+      "badge": "Compras",
+      "titlePt": "No Mercado",
+      "titleAr": "فِي السُّوق",
+      "description": "Barganhando frutas e pão no souq — preços, quilo e conta.",
+      "lines": [
+        { "speaker": "الْبَائِع (Vendedor)", "ar": "أَهْلاً! تَفَضَّل، مَاذَا تُرِيدُ؟", "translit": "ahlan! tafaḍḍal, mādhā turīdu?", "pt": "Olá! Pois não, o que você quer?" },
+        { "speaker": "الزَّبُون (Cliente)", "ar": "كَمْ ثَمَنُ هَذَا الْخُبْزِ؟", "translit": "kam thamanu hādhā l-khubzi?", "pt": "Quanto custa este pão?" },
+        { "speaker": "الْبَائِع (Vendedor)", "ar": "ثَلَاثَةُ رِيَالَاتٍ.", "translit": "thalāthatu riyālātin.", "pt": "Três reais." },
+        { "speaker": "الزَّبُون (Cliente)", "ar": "وَالْفَوَاكِهُ، كَمِ الْكِيلُو؟", "translit": "wa-l-fawākihu, kam al-kīlū?", "pt": "E as frutas, quanto custa o quilo?" },
+        { "speaker": "الْبَائِع (Vendedor)", "ar": "عِشْرُونَ رِيَالاً لِلْكِيلُو.", "translit": "ʿishrūna riyālan li-l-kīlū.", "pt": "Vinte reais o quilo." },
+        { "speaker": "الزَّبُون (Cliente)", "ar": "أُرِيدُ كِيلُواً مِنَ التُّفَاحِ.", "translit": "urīdu kīlan mina t-tuffāḥi.", "pt": "Quero um quilo de maçãs." },
+        { "speaker": "الْبَائِع (Vendedor)", "ar": "الْحِسَابُ تِسْعَةٌ وَعِشْرُونَ رِيَالاً.", "translit": "al-ḥisābu tisʿatun wa-ʿishrūna riyālan.", "pt": "A conta é vinte e nove reais." },
+        { "speaker": "الزَّبُون (Cliente)", "ar": "تَفَضَّل. شُكْراً!", "translit": "tafaḍḍal. shukran!", "pt": "Aqui está. Obrigado!" }
+      ]
+    },
+    {
+      "id": "university",
+      "icon": "fa-graduation-cap",
+      "badge": "Estudos",
+      "titlePt": "Na Universidade",
+      "titleAr": "فِي الْجَامِعَة",
+      "description": "Primeiro dia de aula: se apresentar, dizer de onde vem e quanto tempo estuda.",
+      "lines": [
+        { "speaker": "الطَّالِب (Estudante)", "ar": "مَسَاءُ الْخَيْرِ، أَنَا طَالِبٌ جَدِيدٌ مِنَ الْبَرَازِيلِ.", "translit": "masāʾu l-khayri, anā ṭālibun jadīdun mina l-Brāzīli.", "pt": "Boa noite, sou estudante novo, do Brasil." },
+        { "speaker": "الْأُسْتَاذ (Professor)", "ar": "أَهْلاً بِكَ! مِنْ أَيِّ مَدِينَةٍ فِي الْبَرَازِيلِ؟", "translit": "ahlan bika! min ayyi madīnatin fī l-Brāzīli?", "pt": "Seja bem-vindo! De qual cidade do Brasil?" },
+        { "speaker": "الطَّالِب (Estudante)", "ar": "مِنْ رِيو دِي جَانِيرُو.", "translit": "min Rīū Dī Jānīrū.", "pt": "Do Rio de Janeiro." },
+        { "speaker": "الْأُسْتَاذ (Professor)", "ar": "كَمْ سَنَةً تَدْرُسُ الْعَرَبِيَّةَ؟", "translit": "kam sanatan tadrusu l-ʿarabiyyata?", "pt": "Há quantos anos estuda árabe?" },
+        { "speaker": "الطَّالِب (Estudante)", "ar": "سَنَةً وَاحِدَةً، لَكِنْ مَا زَلْتُ أَتَعَلَّمُ.", "translit": "sanatan wāḥidatan, lākin mā zaltu ataʿallamu.", "pt": "Um ano, mas ainda estou aprendendo." },
+        { "speaker": "الْأُسْتَاذ (Professor)", "ar": "أَحْسَنْتَ! الْعَرَبِيَّةُ لُغَةٌ جَمِيلَةٌ وَسَنَتَعَلَّمُ مَعاً.", "translit": "aḥsanta! al-ʿarabiyyatu lugḥatun jamīlatun wa-sa-nataʿallamu maʿan.", "pt": "Muito bem! O árabe é uma língua linda e aprenderemos juntos." }
+      ]
+    },
+    {
+      "id": "friends",
+      "icon": "fa-handshake",
+      "badge": "Social",
+      "titlePt": "Fazendo Amigos",
+      "titleAr": "تَكْوِينُ الصَّدَاقَات",
+      "description": "Conversa leve com um egípcio: nomes, origem e planos de turismo.",
+      "lines": [
+        { "speaker": "أَحْمَد (Ahmad)", "ar": "السَّلَامُ عَلَيْكُمْ! أَنَا أَحْمَد.", "translit": "as-salāmu ʿalaykum! anā Aḥmad.", "pt": "Que a paz esteja com você! Eu sou Ahmad." },
+        { "speaker": "سِلْفَا (Silva)", "ar": "وَعَلَيْكُمُ السَّلَامُ. أَنَا سِلْفَا. مِنْ أَيْنَ أَنْتَ؟", "translit": "wa-ʿalaykumu s-salām. anā Sīlfā. min ayna anta?", "pt": "E que a paz esteja com você. Sou Silva. De onde você é?" },
+        { "speaker": "أَحْمَد (Ahmad)", "ar": "أَنَا مِنْ مِصْرَ. وَأَنْتِ؟", "translit": "anā min Miṣra. wa-anti?", "pt": "Sou do Egito. E você?" },
+        { "speaker": "سِلْفَا (Silva)", "ar": "أَنَا مِنَ الْبَرَازِيلِ. أَتَعَلَّمُ الْعَرَبِيَّةَ فِي الْجَامِعَةِ.", "translit": "anā mina l-Brāzīli. ataʿallamu l-ʿarabiyyata fī l-jāmiʿati.", "pt": "Sou do Brasil. Aprendo árabe na universidade." },
+        { "speaker": "أَحْمَد (Ahmad)", "ar": "رَائِعٌ! هَلْ زُرْتِ الْقَاهِرَةَ قَبْلُ؟", "translit": "rāʾiʿun! hal zurti l-Qāhirata qablu?", "pt": "Que legal! Já visitou o Cairo antes?" },
+        { "speaker": "سِلْفَا (Silva)", "ar": "لَا، هَذِهِ أَوَّلُ مَرَّةٍ. أُرِيدُ أَنْ أَزُورَ الْأَهْرَامَاتِ.", "translit": "lā, hādhihi awwalu marratin. urīdu an azūra l-ahrāmāti.", "pt": "Não, é minha primeira vez. Quero visitar as pirâmides." },
+        { "speaker": "أَحْمَد (Ahmad)", "ar": "سَأَذْهَبُ مَعَكِ إِنْ شَاءَ اللَّهُ!", "translit": "sa-adhhabu maʿaki in shāʾa Allāhu!", "pt": "Irei com você, Deus queira!" }
+      ]
+    }
+  ]
+}

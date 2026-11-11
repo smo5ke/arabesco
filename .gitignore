@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+
+# tools temp
+tools/_font_probe.png
+
+# OS / editor
+Thumbs.db
+.DS_Store
+.vscode/

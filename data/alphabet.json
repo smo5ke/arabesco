@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "title": "Alfabeto Árabe — الأَبْجَدِيَّة",
+    "subtitle": "28 letras, lidas da direita para a esquerda",
+    "intro": "O alfabeto árabe tem 28 letras. Muitas mudam de forma conforme a posição na palavra. Clique em uma letra para ouvir, ver as 4 posições e aprender seu som."
+  },
+  "letters": [
+    { "id": 1, "char": "ا", "name": "alif", "nameAr": "أَلِف", "sound": "ā", "desc": "Vogal longa 'a', como o 'a' de 'pai' esticado. É uma reta vertical — nunca se liga à letra seguinte.", "forms": ["ا", "ا", "ـا", "ـا"], "sunMoon": "moon", "example": { "word": "كِتَاب", "translit": "kitāb", "meaning": "livro" }, "connects": false },
+    { "id": 2, "char": "ب", "name": "bāʾ", "nameAr": "بَاء", "sound": "b", "desc": "Igual ao 'b' de 'bola'. Ponto embaixo.", "forms": ["ب", "بـ", "ـبـ", "ـب"], "sunMoon": "sun", "example": { "word": "بَاب", "translit": "bāb", "meaning": "porta" }, "connects": true },
+    { "id": 3, "char": "ت", "name": "tāʾ", "nameAr": "تَاء", "sound": "t", "desc": "Igual ao 't' de 'tapete'. Dois pontos em cima.", "forms": ["ت", "تـ", "ـتـ", "ـت"], "sunMoon": "sun", "example": { "word": "تِلْمِيذ", "translit": "tilmīdh", "meaning": "aluno" }, "connects": true },
+    { "id": 4, "char": "ث", "name": "thāʾ", "nameAr": "ثَاء", "sound": "th", "desc": "Como o 'th' de 'think' em inglês — ponta da língua entre os dentes. Três pontos em cima.", "forms": ["ث", "ثـ", "ـثـ", "ـث"], "sunMoon": "sun", "example": { "word": "ثَلْج", "translit": "thalj", "meaning": "gelo" }, "connects": true },
+    { "id": 5, "char": "ج", "name": "jīm", "nameAr": "جِيم", "sound": "j", "desc": "Igual ao 'j' de 'janela'. Tem um ponto embaixo.", "forms": ["ج", "جـ", "ـجـ", "ـج"], "sunMoon": "moon", "example": { "word": "جَمَل", "translit": "jamal", "meaning": "camelo" }, "connects": true },
+    { "id": 6, "char": "ح", "name": "ḥāʾ", "nameAr": "حَاء", "sound": "ḥ", "desc": "H forte saído do fundo da garganta, como um hálito quente embaçando o vidro. Não existe em português.", "forms": ["ح", "حـ", "ـحـ", "ـح"], "sunMoon": "moon", "example": { "word": "حُبّ", "translit": "ḥubb", "meaning": "amor" }, "connects": true },
+    { "id": 7, "char": "خ", "name": "khāʾ", "nameAr": "خَاء", "sound": "kh", "desc": "Como o 'rr' carioca em 'carro' — som raspado na garganta. Ponto em cima sobre o ح.", "forms": ["خ", "خـ", "ـخـ", "ـخ"], "sunMoon": "moon", "example": { "word": "خُبْز", "translit": "khubz", "meaning": "pão" }, "connects": true },
+    { "id": 8, "char": "د", "name": "dāl", "nameAr": "دَال", "sound": "d", "desc": "Igual ao 'd' de 'dedo'. Não se liga à letra seguinte.", "forms": ["د", "د", "ـد", "ـد"], "sunMoon": "sun", "example": { "word": "دَار", "translit": "dār", "meaning": "casa (grande)" }, "connects": false },
+    { "id": 9, "char": "ذ", "name": "dhāl", "nameAr": "ذَال", "sound": "dh", "desc": "Como o 'th' sonoro de 'this' em inglês. Ponto em cima sobre o د.", "forms": ["ذ", "ذ", "ـذ", "ـذ"], "sunMoon": "sun", "example": { "word": "ذَهَب", "translit": "dhahab", "meaning": "ouro" }, "connects": false },
+    { "id": 10, "char": "ر", "name": "rāʾ", "nameAr": "رَاء", "sound": "r", "desc": "R leve e simples, como o 'r' de 'caro' — nunca o 'rr' forte.", "forms": ["ر", "ر", "ـر", "ـر"], "sunMoon": "sun", "example": { "word": "رَمْل", "translit": "raml", "meaning": "areia" }, "connects": false },
+    { "id": 11, "char": "ز", "name": "zāy", "nameAr": "زَاي", "sound": "z", "desc": "Igual ao 'z' de 'zebra'. Ponto em cima sobre o ر.", "forms": ["ز", "ز", "ـز", "ـز"], "sunMoon": "sun", "example": { "word": "زَيْت", "translit": "zayt", "meaning": "azeite / óleo" }, "connects": false },
+    { "id": 12, "char": "س", "name": "sīn", "nameAr": "سِين", "sound": "s", "desc": "Igual ao 's' de 'sol'. Três dentes com dois pontos em cima.", "forms": ["س", "سـ", "ـسـ", "ـس"], "sunMoon": "sun", "example": { "word": "سَمَك", "translit": "samak", "meaning": "peixe" }, "connects": true },
+    { "id": 13, "char": "ش", "name": "shīn", "nameAr": "شِين", "sound": "sh", "desc": "Igual ao 'ch' de 'chuva'. Três pontos em cima.", "forms": ["ش", "شـ", "ـشـ", "ـش"], "sunMoon": "sun", "example": { "word": "شَمْس", "translit": "shams", "meaning": "sol" }, "connects": true },
+    { "id": 14, "char": "ص", "name": "ṣād", "nameAr": "صَاد", "sound": "ṣ", "desc": "S enfático — pronunciado com a língua grossa e larga, soa mais 'escuro' que o س.", "forms": ["ص", "صـ", "ـصـ", "ـص"], "sunMoon": "sun", "example": { "word": "صَحْرَاء", "translit": "ṣaḥrāʾ", "meaning": "deserto" }, "connects": true },
+    { "id": 15, "char": "ض", "name": "ḍād", "nameAr": "ضَاد", "sound": "ḍ", "desc": "D enfático, 'escuro' — o som que dá nome à língua árabe: 'a língua do ḍād'.", "forms": ["ض", "ضـ", "ـضـ", "ـض"], "sunMoon": "sun", "example": { "word": "ضَيْف", "translit": "ḍayf", "meaning": "convidado" }, "connects": true },
+    { "id": 16, "char": "ط", "name": "ṭāʾ", "nameAr": "طَاء", "sound": "ṭ", "desc": "T enfático — como o t normal, mas pronunciado com a língua grossa.", "forms": ["ط", "طـ", "ـطـ", "ـط"], "sunMoon": "sun", "example": { "word": "طَالِب", "translit": "ṭālib", "meaning": "estudante" }, "connects": true },
+    { "id": 17, "char": "ظ", "name": "ẓāʾ", "nameAr": "ظَاء", "sound": "ẓ", "desc": "Z enfático com a língua entre os dentes — o mais raro dos sons enfáticos. Ponto em cima.", "forms": ["ظ", "ظـ", "ـظـ", "ـظ"], "sunMoon": "sun", "example": { "word": "ظِلّ", "translit": "ẓill", "meaning": "sombra" }, "connects": true },
+    { "id": 18, "char": "ع", "name": "ʿayn", "nameAr": "عَيْن", "sound": "ʿ", "desc": "O som mais difícil: a garganta se aperta como quem diz 'a' sufocado. Exige prática diária.", "forms": ["ع", "عـ", "ـعـ", "ـع"], "sunMoon": "moon", "example": { "word": "عَيْن", "translit": "ʿayn", "meaning": "olho / fonte" }, "connects": true },
+    { "id": 19, "char": "غ", "name": "ghayn", "nameAr": "غَيْن", "sound": "gh", "desc": "G raspado na garganta, como o 'r' francês de 'Paris'. Ponto em cima sobre o ع.", "forms": ["غ", "غـ", "ـغـ", "ـغ"], "sunMoon": "moon", "example": { "word": "غَزَال", "translit": "ghazāl", "meaning": "gazela" }, "connects": true },
+    { "id": 20, "char": "ف", "name": "fāʾ", "nameAr": "فَاء", "sound": "f", "desc": "Igual ao 'f' de 'faca'. Um ponto em cima.", "forms": ["ف", "فـ", "ـفـ", "ـف"], "sunMoon": "moon", "example": { "word": "فِيل", "translit": "fīl", "meaning": "elefante" }, "connects": true },
+    { "id": 21, "char": "ق", "name": "qāf", "nameAr": "قَاف", "sound": "q", "desc": "K pronunciado bem no fundo da garganta — mais 'profundo' e seco que o ك. Dois pontos em cima.", "forms": ["ق", "قـ", "ـقـ", "ـق"], "sunMoon": "moon", "example": { "word": "قَمَر", "translit": "qamar", "meaning": "lua" }, "connects": true },
+    { "id": 22, "char": "ك", "name": "kāf", "nameAr": "كَاف", "sound": "k", "desc": "Igual ao 'k' de 'casa'. Parece um 'S' com a boca aberta.", "forms": ["ك", "كـ", "ـكـ", "ـك"], "sunMoon": "moon", "example": { "word": "كَلِمَة", "translit": "kalima", "meaning": "palavra" }, "connects": true },
+    { "id": 23, "char": "ل", "name": "lām", "nameAr": "لَام", "sound": "l", "desc": "Igual ao 'l' de 'leite'. É a letra mais elegante do alfabeto.", "forms": ["ل", "لـ", "ـلـ", "ـل"], "sunMoon": "sun", "example": { "word": "لَيْل", "translit": "layl", "meaning": "noite" }, "connects": true },
+    { "id": 24, "char": "م", "name": "mīm", "nameAr": "مِيم", "sound": "m", "desc": "Igual ao 'm' de 'mãe'. Uma bolinha com uma cauda.", "forms": ["م", "مـ", "ـمـ", "ـم"], "sunMoon": "moon", "example": { "word": "مَاء", "translit": "māʾ", "meaning": "água" }, "connects": true },
+    { "id": 25, "char": "ن", "name": "nūn", "nameAr": "نُون", "sound": "n", "desc": "Igual ao 'n' de 'navio'. Uma bolinha com um ponto em cima.", "forms": ["ن", "نـ", "ـنـ", "ـن"], "sunMoon": "sun", "example": { "word": "نَار", "translit": "nār", "meaning": "fogo" }, "connects": true },
+    { "id": 26, "char": "ه", "name": "hāʾ", "nameAr": "هَاء", "sound": "h", "desc": "H aspirado leve, como o 'h' inglês de 'house' — nunca é mudo como em 'honesto'.", "forms": ["ه", "هـ", "ـهـ", "ـه"], "sunMoon": "moon", "example": { "word": "هِلَال", "translit": "hilāl", "meaning": "lua crescente" }, "connects": true },
+    { "id": 27, "char": "و", "name": "wāw", "nameAr": "وَاو", "sound": "w", "desc": "Como o 'w' de 'water' em inglês. Não se liga à letra seguinte. Também pode ser vogal longa 'ū'.", "forms": ["و", "و", "ـو", "ـو"], "sunMoon": "moon", "example": { "word": "وَرْد", "translit": "ward", "meaning": "rosa (flor)" }, "connects": false },
+    { "id": 28, "char": "ي", "name": "yāʾ", "nameAr": "يَاء", "sound": "y", "desc": "Como o 'y' de 'iogurte'. Dois pontos embaixo. Também pode ser vogal longa 'ī'.", "forms": ["ي", "يـ", "ـيـ", "ـي"], "sunMoon": "moon", "example": { "word": "يَد", "translit": "yad", "meaning": "mão" }, "connects": true }
+  ],
+  "harakat": [
+    { "sign": "ـَ", "name": "fatḥa", "nameAr": "فَتْحَة", "sound": "a", "desc": "Traço pequeno em cima da letra — som de 'a'. Ex: كَتَبَ (kataba)." },
+    { "sign": "ـِ", "name": "kasra", "nameAr": "كَسْرَة", "sound": "i", "desc": "Traço pequeno embaixo da letra — som de 'i'. Ex: كِتَاب (kitāb)." },
+    { "sign": "ـُ", "name": "ḍamma", "nameAr": "ضَمَّة", "sound": "u", "desc": "Um 'waw' mini em cima da letra — som de 'u'. Ex: كُتُب (kutub)." },
+    { "sign": "ـْ", "name": "sukūn", "nameAr": "سُكُون", "sound": "—", "desc": "Circulinho em cima — a letra fica sem vogal, fecha a sílaba. Ex: مِنْ (min)." },
+    { "sign": "ـّ", "name": "shadda", "nameAr": "شَدَّة", "sound": "2×", "desc": "Dobra a letra: a primeira fecha a sílaba, a segunda abre nova. Ex: مُدَرِّس (mudarris)." },
+    { "sign": "ـً", "name": "tanwīn", "nameAr": "تَنْوِين", "sound": "an / in / un", "desc": "Termina substantivos indefinidos, como um artigo 'um/uma'. Ex: كِتَابٌ (kitābun — um livro)." }
+  ],
+  "sunMoonLesson": {
+    "title": "Letras Solares e Lunares — الحُرُوفُ الشَّمْسِيَّةُ وَالْقَمَرِيَّة",
+    "intro": "O artigo definido «الـ» (o/a) se comporta de dois jeitos: com as letras solares, o L desaparece e a letra se dobra; com as lunares, o L é pronunciado normalmente.",
+    "sun": { "desc": "14 letras — o 'L' do artigo desaparece e a primeira letra da palavra recebe shadda (dobra).", "ex1": { "ar": "ال + شَمْس", "read": "ash-shams", "pt": "o sol (não: 'al-shams')" }, "ex2": { "ar": "ال + نَاس", "read": "an-nās", "pt": "as pessoas" } },
+    "moon": { "desc": "14 letras — o 'L' é pronunciado com toda a força.", "ex1": { "ar": "ال + قَمَر", "read": "al-qamar", "pt": "a lua" }, "ex2": { "ar": "ال + كِتَاب", "read": "al-kitāb", "pt": "o livro" } }
+  },
+  "quizBank": [
+    { "q": "Como se lê «خُبْز»?", "opts": ["khubz (pão)", "habuz", "khabz", "jubz"], "answer": 0 },
+    { "q": "Qual letra tem som do 'rr' de 'carro' carioca?", "opts": ["ج", "خ", "ح", "غ"], "answer": 1 },
+    { "q": "«شَمْس» significa:", "opts": ["lua", "estrela", "sol", "céu"], "answer": 2 },
+    { "q": "O artigo «ال + قَمَر» se lê:", "opts": ["ash-qamar", "al-qamar", "aq-qamar", "al-shamar"], "answer": 1 },
+    { "q": "Quantas letras tem o alfabeto árabe?", "opts": ["26", "27", "28", "29"], "answer": 2 },
+    { "q": "A letra «ع» se pronuncia:", "opts": ["com os lábios", "apertando a garganta", "com a língua entre os dentes", "como 'k' profundo"], "answer": 1 },
+    { "q": "«شَدَّة» (shadda) serve para:", "opts": ["negar", "dobrar a letra", "alongar a vogal", "fazer pergunta"], "answer": 1 },
+    { "q": "Qual destas letras NÃO se liga à letra seguinte?", "opts": ["ب", "د", "م", "س"], "answer": 1 },
+    { "q": "«فَتْحَة» é o sinal que representa o som:", "opts": ["i", "u", "a", "mudo"], "answer": 2 },
+    { "q": "«ال + نَاس» se lê:", "opts": ["al-nās", "an-nās", "an-lās", "al-lās"], "answer": 1 }
+  ]
+}
