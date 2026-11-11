@@ -42,7 +42,7 @@ export function fmtDateLong(ts) {
 }
 
 /* ── Toast ─────────────────────────────────────────────── */
-export function toast(msg, { icon = 'fa-star', type = '' } = {}) {
+export function toast(msg, { icon = 'fa-star', type = '', ms = 2600 } = {}) {
   const wrap = $('#toasts');
   if (!wrap) return;
   const t = document.createElement('div');
@@ -54,7 +54,7 @@ export function toast(msg, { icon = 'fa-star', type = '' } = {}) {
     t.style.opacity = '0';
     t.style.transform = 'translateY(8px)';
     setTimeout(() => t.remove(), 320);
-  }, 2600);
+  }, ms);
 }
 
 /* ── XP float ──────────────────────────────────────────── */

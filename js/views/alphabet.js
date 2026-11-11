@@ -84,7 +84,7 @@ export async function renderAlphabet(section) {
     openLetter(+t.dataset.letter, section);
   }));
   $$('[data-haraka]', section).forEach(b => b.addEventListener('click', () => {
-    speakArabic('َ ِ ُ', getState().ttsRate);
+    speakArabic('أَ أِ أُ', getState().ttsRate);
     toast('Ouça: فتحة (a) · كسرة (i) · ضمة (u)', { icon: 'fa-music' });
   }));
   $('#alpha-quiz-start', section)?.addEventListener('click', () => startQuiz(section, alpha));

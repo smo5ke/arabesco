@@ -27,6 +27,23 @@ Uma plataforma completa para brasileiros aprenderem árabe padrão (fushā) — 
 
 ---
 
+## 🔊 Áudio no celular | الصوت على الجوال
+
+O áudio usa a voz de síntese **do próprio aparelho** (Web Speech API). Se tocar no 🔊 e não sair som:
+
+| Situação | Solução |
+|---|---|
+| **Android sem voz árabe** | Configurações → Gerenciar apps → **Google Serviços de fala (Speech Services)** → Instalar dados de voz → **Árabe**. Depois reinicie o navegador |
+| **iPhone/iPad** | A voz árabe (Majed) já vem instalada — confira se o **botão de silencioso** lateral está desligado e o volume ligado |
+| **Abriu pelo Instagram/WhatsApp** | Navegadores internos (in-app) frequentemente bloqueiam áudio. Abra o link no **Chrome** (Android) ou **Safari** (iPhone) |
+| **Modo economia de dados** | Alguns aparelhos bloqueiam síntese de voz nele — desative para o navegador |
+
+أفضل تجربة: افتح الرابط في Chrome أو Safari مباشرة (وليس داخل تطبيق آخر)، وتأكد أن الجهاز يحتوي حزمة النطق العربية.
+
+> 💡 O app avisa na tela quando o aparelho não tem voz árabe instalada.
+
+---
+
 ## 🚀 Como rodar localmente | التشغيل محلياً
 
 1. Instale [Python](https://python.org) (ou use `py`).
