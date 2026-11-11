@@ -1,5 +1,5 @@
-/* Arabesco — Service Worker (offline-ready) */
-const CACHE = 'arabesco-v1';
+/* Arabesco — Service Worker (offline-ready, updates always delivered) */
+const CACHE = 'arabesco-v2';
 const ASSETS = [
   './',
   './index.html',
@@ -30,16 +30,25 @@ self.addEventListener('activate', e => {
 
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
-  e.respondWith(
-    caches.match(e.request).then(hit => {
-      const net = fetch(e.request).then(res => {
-        if (res.ok && e.request.url.startsWith(self.location.origin)) {
-          const copy = res.clone();
-          caches.open(CACHE).then(c => c.put(e.request, copy));
-        }
-        return res;
-      }).catch(() => hit);
-      return hit || net;
-    })
-  );
+  /* network-first: visitors always get the latest version when online;
+     offline (or a failed request) falls back to the cached copy. */
+  e.respondWith((async () => {
+    const hit = await caches.match(e.request);
+    try {
+      const res = await fetch(e.request);
+      if (res.ok && e.request.url.startsWith(self.location.origin)) {
+        const copy = res.clone();
+        e.waitUntil(caches.open(CACHE).then(c => c.put(e.request, copy)));
+      }
+      return res;
+    } catch (err) {
+      if (hit) return hit;
+      /* offline navigation → serve the app shell */
+      if (e.request.mode === 'navigate') {
+        const shell = await caches.match('./index.html');
+        if (shell) return shell;
+      }
+      throw err;
+    }
+  })());
 });
