@@ -7,7 +7,7 @@ Usage:  python tools/dev_server.py  (from the Arabesco folder) — serves on htt
 import sys
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 
-PORT = 8080
+PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 8080
 
 
 class NoCacheHandler(SimpleHTTPRequestHandler):

@@ -61,7 +61,7 @@ export async function renderCards(section) {
     <div class="row spread wrap mb-2">
       <div>
         <h2 style="font-size:22px;font-weight:800">Cartões Inteligentes <span class="ar-display" style="font-size:18px;color:var(--gold-strong)">بِطَاقَات</span></h2>
-        <p class="small muted">Vire com <b>Espaço</b>, navegue com <b>← →</b>, avalie com <b>1 · 2 · 3</b></p>
+        <p class="small muted">Vire com <b>Espaço</b>, navegue com <b>← →</b> ou nas <b>setas</b> abaixo do cartão, avalie com <b>1 · 2 · 3</b> · deslize no celular</p>
       </div>
       <div class="chip-row" id="deck-modes">
         ${MODES.map(m => `<button class="chip ${state.mode === m.v ? 'active' : ''}" data-mode="${m.v}"><i class="fa-solid ${m.icon}"></i> ${m.label}</button>`).join('')}
@@ -73,6 +73,7 @@ export async function renderCards(section) {
     <div class="row spread small muted mb-2">
       <span id="deck-count">—</span>
       <div class="row" style="gap:8px">
+        <button class="btn sm" id="deck-shuffle" title="Embaralhar pilha"><i class="fa-solid fa-shuffle"></i></button>
         <input class="input" id="deck-jump" type="number" min="1" placeholder="Nº do cartão" style="width:110px;padding:7px 10px;font-size:12.5px">
         <button class="btn sm" id="deck-jump-btn"><i class="fa-solid fa-location-crosshairs"></i></button>
       </div>
@@ -97,6 +98,16 @@ export async function renderCards(section) {
   $('#deck-jump-btn', section)?.addEventListener('click', () => {
     const n = parseInt($('#deck-jump', section).value, 10);
     if (n >= 1 && n <= state.deck.length) { state.idx = n - 1; state.flipped = false; drawCard(section); }
+  });
+  $('#deck-shuffle', section)?.addEventListener('click', () => {
+    if (state.deck.length < 2) return;
+    for (let i = state.deck.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [state.deck[i], state.deck[j]] = [state.deck[j], state.deck[i]];
+    }
+    state.idx = 0; state.flipped = false;
+    drawCard(section);
+    toast('Baralho embaralhado', { icon: 'fa-shuffle' });
   });
 
   document.addEventListener('keydown', cardsKeyHandler);
@@ -210,6 +221,11 @@ function drawCard(sec) {
           <button class="rate-btn easy" data-rate="5"><span>3 · Fácil</span><small>espaçar mais</small></button>
         </div>
       </div>
+    </div>
+    <div class="flash-navrow">
+      <button class="btn sm" id="nav-prev" ${state.idx <= 0 ? 'disabled' : ''}><i class="fa-solid fa-arrow-left"></i> anterior</button>
+      <span class="pos small muted">${(state.idx + 1).toLocaleString('pt-BR')} / ${state.deck.length.toLocaleString('pt-BR')}</span>
+      <button class="btn sm" id="nav-next" ${state.idx >= state.deck.length - 1 ? 'disabled' : ''}>próxima <i class="fa-solid fa-arrow-right"></i></button>
     </div>`;
 
   const card = $('#flash-card', stage);
@@ -217,6 +233,19 @@ function drawCard(sec) {
     if (ev.target.closest('button')) return;
     flip(sec);
   });
+  /* arrows under the card */
+  $('#nav-prev', stage)?.addEventListener('click', () => nav(-1, sec));
+  $('#nav-next', stage)?.addEventListener('click', () => nav(1, sec));
+  /* swipe navigation (mobile) */
+  let tx = 0, ty = 0;
+  card.addEventListener('touchstart', ev => {
+    tx = ev.changedTouches[0].clientX; ty = ev.changedTouches[0].clientY;
+  }, { passive: true });
+  card.addEventListener('touchend', ev => {
+    const dx = ev.changedTouches[0].clientX - tx;
+    const dy = ev.changedTouches[0].clientY - ty;
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) nav(dx > 0 ? 1 : -1, sec);
+  }, { passive: true });
   $('#card-speak', stage)?.addEventListener('click', () => {
     const b = $('#card-speak', stage);
     speakArabic(e.word, getState().ttsRate);
