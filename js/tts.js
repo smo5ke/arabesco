@@ -25,14 +25,52 @@ export function arabicVoice() {
 }
 
 /* Explain silence when the device has no Arabic TTS voice installed. */
+export function openAudioHelp() {
+  import('./ui.js').then(({ toast, openModal }) => {
+    const content = openModal(`
+      <div class="center">
+        <div style="font-size:42px">🔊</div>
+        <h3 style="margin:6px 0 4px">Sem som? Ative a voz árabe do aparelho</h3>
+        <p class="small muted">O áudio usa a voz instalada no próprio celular. Basta ativar uma vez:</p>
+      </div>
+
+      <div class="card mt-2" style="padding:16px 18px">
+        <div style="font-size:14px;font-weight:800;margin-bottom:6px"><i class="fa-brands fa-android" style="color:var(--gold-strong)"></i> Android (Samsung e outros)</div>
+        <ol class="small" style="padding-left:18px;line-height:1.9;margin:0">
+          <li>Abra <b>Configurações</b> do celular</li>
+          <li>Busque <b>"Conversão de texto em fala"</b> (em Gerenciamento geral)</li>
+          <li>Em <b>Motor</b>, escolha <b>Speech Services by Google</b></li>
+          <li>Toque na <b>engrenagem ⚙︎</b> → <b>Instalar dados de voz</b> → baixe <b>Árabe</b> (use Wi-Fi)</li>
+          <li>Feche e reabra o navegador por completo</li>
+        </ol>
+      </div>
+
+      <div class="card mt-2" style="padding:16px 18px">
+        <div style="font-size:14px;font-weight:800;margin-bottom:6px"><i class="fa-brands fa-apple" style="color:var(--gold-strong)"></i> iPhone / iPad</div>
+        <ol class="small" style="padding-left:18px;line-height:1.9;margin:0">
+          <li>A voz árabe <b>(Majed)</b> já vem instalada</li>
+          <li>Desligue o <b>botão de silencioso</b> lateral</li>
+          <li>Aumente o volume</li>
+        </ol>
+      </div>
+
+      <button class="btn primary mt-3" id="audio-retest" style="width:100%"><i class="fa-solid fa-volume-high"></i> Testar de novo</button>
+      <p class="small muted mt-1 center"><i class="fa-solid fa-lightbulb"></i> Se abriu pelo Instagram/WhatsApp, use o <b>Chrome</b> ou <b>Safari</b> direto</p>
+    `);
+    content.querySelector('#audio-retest')?.addEventListener('click', () => {
+      speakArabic('مَرْحَبًا! هَذَا صَوْتُ الْعَرَبِيَّةِ');
+      if (arabicVoice()) toast('Tudo certo! Áudio ativado 🎧', { icon: 'fa-check', type: 'success' });
+      else toast('Ainda sem voz árabe — siga os passos acima', { icon: 'fa-volume-xmark', ms: 4500 });
+    });
+  });
+}
+
 function warnNoArabicVoice() {
   if (noVoiceWarned) return;
   noVoiceWarned = true;
+  openAudioHelp();
   import('./ui.js').then(({ toast }) => {
-    toast(
-      'Aparelho sem voz árabe — no Android, instale/ative o "Google Serviços de fala" e baixe o idioma Árabe; no iPhone verifique o botão de silencioso',
-      { icon: 'fa-volume-xmark', ms: 8000 }
-    );
+    toast('Sem voz árabe no aparelho — siga o guia na tela', { icon: 'fa-volume-xmark', ms: 5000 });
   });
 }
 

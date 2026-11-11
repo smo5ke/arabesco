@@ -1,7 +1,7 @@
 /* Arabesco — app shell: boot, router, theme, onboarding */
 
 import { getState, save } from './store.js';
-import { isSupported, speakArabic, stopAll } from './tts.js';
+import { isSupported, speakArabic, stopAll, openAudioHelp } from './tts.js';
 import { touchStreak, updateMini, missionsDone, checkAchievements, addXP } from './gamify.js';
 import { toast, esc, openModal, closeModal, $, $$ } from './ui.js';
 
@@ -175,6 +175,8 @@ async function boot() {
   });
   $('#theme-toggle')?.addEventListener('click', toggleTheme);
   $('#theme-toggle-mobile')?.addEventListener('click', toggleTheme);
+  $('#audio-help-btn')?.addEventListener('click', () => openAudioHelp());
+  $('#audio-help-btn-m')?.addEventListener('click', () => { openAudioHelp(); window.closeDrawer?.(); });
 
   /* drawer */
   const drawer = $('#drawer');
