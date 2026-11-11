@@ -61,7 +61,7 @@ export function getClipIndex() {
         add(v.base, `audio/v/${v.id}.mp3`);
         for (const f of walkForms(v.conjugation || {})) {
           const key = (f[0] || '').trim();
-          if (key) add(key, `audio/v/${v.id}-${crc32(key)}.mp3`);
+          if (key && /[\u0600-\u06FF]/.test(key)) add(key, `audio/v/${v.id}-${crc32(key)}.mp3`);
         }
       });
       (await getAlphabet()).letters.forEach(l => {

@@ -75,7 +75,7 @@ def build_tasks():
             tasks.append((f"audio/v/{v['id']}.mp3", v["base"].strip()))
         for form in walk_forms(v.get("conjugation") or {}):
             key = (form[0] or "").strip()
-            if key:
+            if key and any("\u0600" <= ch <= "\u06FF" for ch in key):
                 tasks.append((f"audio/v/{v['id']}-{clip_hash(key)}.mp3", key))
 
     # 28 letras: nome + exemplo

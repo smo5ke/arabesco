@@ -102,7 +102,7 @@ function verbCardHTML(v, essential) {
             <div class="stat-grid mt-1">
               ${PERSONS.map(p => {
                 const cell = v.conjugation?.[key]?.[p];
-                if (!cell) return '';
+                if (!cell || !/[\u0600-\u06FF]/.test(cell[0] || '')) return '';
                 return `
                   <div class="form-cell verb-form" data-ar="${esc(cell[0])}" style="cursor:pointer">
                     <div class="glyph" lang="ar" style="font-size:23px">${esc(cell[0])}</div>
@@ -113,13 +113,13 @@ function verbCardHTML(v, essential) {
             </div>
           </div>`).join('')}
         <div class="row wrap mt-3" style="gap:10px">
-          ${v.conjugation?.imperative ? `
+          ${/[\u0600-\u06FF]/.test(v.conjugation?.imperative?.[0] || '') ? `
             <div class="form-cell verb-form" data-ar="${esc(v.conjugation.imperative[0])}">
               <div class="glyph" lang="ar" style="font-size:23px">${esc(v.conjugation.imperative[0])}</div>
               <div class="translit small" style="font-size:11px">${esc(v.conjugation.imperative[1])}</div>
               <div class="pos">${esc(v.conjugation.imperative[2])}</div>
             </div>` : ''}
-          ${v.conjugation?.masdar ? `
+          ${/[\u0600-\u06FF]/.test(v.conjugation?.masdar?.[0] || '') ? `
             <div class="form-cell verb-form" data-ar="${esc(v.conjugation.masdar[0])}">
               <div class="glyph" lang="ar" style="font-size:23px">${esc(v.conjugation.masdar[0])}</div>
               <div class="translit small" style="font-size:11px">${esc(v.conjugation.masdar[1])}</div>
