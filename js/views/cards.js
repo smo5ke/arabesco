@@ -209,6 +209,7 @@ function drawCard(sec) {
             <div class="ar-text">${esc(e.example)}</div>
             ${showTr ? `<span class="translit">${esc(e.exampleTranslit)}</span>` : ''}
             <div class="pt">${esc(e.exampleTr)}</div>
+            <button class="sound-btn" id="card-speak-ex" title="Ouvir a frase de exemplo" style="margin-top:10px"><i class="fa-solid fa-comment-dots"></i></button>
           </div>
           <div class="row center mt-2 small muted" style="justify-content:center;gap:14px">
             <span><i class="fa-solid fa-sitemap"></i> base: <b class="ar-display" style="font-size:15px">${esc(e.base)}</b></span>
@@ -251,6 +252,13 @@ function drawCard(sec) {
     speakArabic(e.word, getState().ttsRate);
     b.classList.add('playing');
     setTimeout(() => b.classList.remove('playing'), 1300);
+  });
+  /* speaker on the example sentence (back face) */
+  $('#card-speak-ex', stage)?.addEventListener('click', ev => {
+    const b = ev.currentTarget;
+    speakArabic(e.example, getState().ttsRate, { onEnd: () => b.classList.remove('playing') });
+    b.classList.add('playing');
+    setTimeout(() => b.classList.remove('playing'), 9000); // safety if onEnd misses
   });
   $('#card-fav', stage)?.addEventListener('click', () => {
     const on = toggleFav(e.id);
